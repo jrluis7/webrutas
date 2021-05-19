@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'webrutas';
+  title     :string = 'webrutas';
+  asteriscos:string = '';
+
+  contador  :number = 0;
+
+  sumaAsteriscos(){
+    this.asteriscos += "*";
+    
+  }
+
+
 }

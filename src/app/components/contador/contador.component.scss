@@ -1,0 +1,23 @@
+h1{
+    color:darkblue;
+}
+
+p{
+    font-size: 30px;
+    &.par{
+        padding: 10px;
+        background-color: lightblue; 
+    }
+    &.impar{
+        padding: 10px;
+        background-color: lightgreen;
+    }
+    &.cero{
+        padding: 10px;
+        background-color: tomato;
+    }
+}
+
+// p.par{
+
+// }

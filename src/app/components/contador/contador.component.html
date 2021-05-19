@@ -1,0 +1,19 @@
+<h1> Contador </h1>
+<p>
+    {{ contador }}
+</p>
+<p *ngIf=" contador%2 == 0 && contador !=0 " class="par">
+    Es PAR
+</p>
+<p *ngIf=" contador%2 != 0 " class="impar">
+    Es IMPAR
+</p>
+<p *ngIf=" contador==0 " class="cero">
+    No tiene paridad
+</p>
+<div>
+    <button (click)="restar()" >Menos</button>
+    <button (click)="sumar()" >Más</button>
+</div>
+<!-- <img src="{{ url_img }}" > -->
+<img [src]="url_img" >
