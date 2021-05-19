@@ -1,7 +1,23 @@
-<h1> Hola web Rutas </h1>
-<h2> {{ title }} </h2>
-<h2> {{ asteriscos }} </h2>
+<nav>
+    <span> 
+        <!-- <a href="/" > Home </a>  -->
+        <a [routerLink]="['/']" > Home </a> 
+    </span>
+    <span> 
+        <!-- <a href="/servicios"> Servicios </a>   -->
+        <a [routerLink]="['/servicios']"> Servicios </a>  
+    </span>
+    
+</nav>
 
 <button (click)="sumaAsteriscos()" > Suma </button>
 
-<app-contador></app-contador>
+<router-outlet></router-outlet>
+
+<!-- 
+    <app-contador></app-contador>
+
+    <app-paginaservicios></app-paginaservicios>
+
+    <app-paginacontacto></app-paginacontacto>
+ -->
