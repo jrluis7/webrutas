@@ -1,0 +1,25 @@
+<h2>Alumnos</h2>
+<h4> Profesor: {{ profesor +' '+ apellido}} </h4>
+<button (click)="openClose()"> Desplegar info. </button>
+<hr>
+<h5>Información del curso</h5>
+<div *ngIf="isOpen==true">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia temporibus vel eum aut laudantium aspernatur beatae dolorum sequi fugiat excepturi soluta maiores cum ab quam quae, corrupti facilis labore consequuntur.
+</div>
+
+<!-- <div *ngIf="apellidoVisible==true">Apellido: {{alumno.apellido}} </div> -->
+<button (click)="selectMatriculados()"> Matriculados </button>
+<button (click)="selectNOMatriculados()"> NO Matriculados </button>
+<div id="gridAlumnos">
+    <div *ngFor="let cadaAlumno of listaAlumnos; let i = index" >
+        <div class="alumno" *ngIf="cadaAlumno.matriculado==filtroMatriculados">
+            {{i}}. {{ cadaAlumno.nombre }} {{cadaAlumno.apellido}}
+            <span class="fecha"> {{cadaAlumno.fecha}}  </span>
+        </div>
+       
+    </div>
+    <!-- <div class="alumno">
+        {{ listaAlumnos[1].nombre }} {{listaAlumnos[1].apellido}}
+        <span class="fecha"> {{listaAlumnos[1].fecha}}  </span>
+   </div> -->
+</div>
